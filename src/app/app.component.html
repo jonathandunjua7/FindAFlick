@@ -1,0 +1,20 @@
+<div id="banner">
+  <h1>FindAFlick</h1>
+  <h2>Your home of entertainment</h2>
+</div>
+<div class="topnav">
+  <!--<a routerLink="#" routerActiveLink="#">Popular</a>-->
+  <a routerLink="/trending" routerActiveLink="active">Trending</a>
+  <a routerLink="/comingsoon" routerActiveLink="active">Coming Soon</a>
+  <a routerLink="/nowplaying" routerActiveLink="active">Now Playing</a>
+  <!--<input type="text" placeholder="Search..">-->
+</div>
+
+<p>
+  Welcome to FindAFlick, click on any of the above links to access our content. 
+</p>
+<mat-card *ngFor="let movie of movies" (click)="getMovieID(movie)">
+  <h3>{{movie.title}}</h3>
+</mat-card>
+
+<router-outlet></router-outlet>
